@@ -445,28 +445,5 @@
         </ul>
     </div>
 
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-
-            function toggleDiscord() {
-                const discordSection = document.getElementById('discord-section');
-                if (discordSection) {
-                    discordSection.style.display = discordSection.style.display === 'none' ? 'block' : 'none';
-                } else {
-                    const newSection = document.createElement('div');
-                    newSection.className = 'profile-section';
-                    newSection.id = 'discord-section';
-                    newSection.innerHTML = `
-                        <div class="game-title">DISCORD SERVER</div>
-                        <p class="profile-text">
-                            <a href="https://discord.gg/KZ64fSRFZh">discord.gg/KZ64fSRFZh</a>
-                        </p>
-                    `;
-                    const snsSection = document.querySelector('.profile-section');
-                    snsSection.parentNode.insertBefore(newSection, snsSection.nextSibling);
-                }
-            }
-        });
-    </script>
 </body>
 </html>
