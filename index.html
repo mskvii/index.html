@@ -449,7 +449,7 @@
         window.addEventListener('DOMContentLoaded', function() {
             const hasVisited = localStorage.getItem('hasVisitedWelcome');
 
-            if (!hasVisited && document.referrer) {
+            if (!hasVisited) {
                 localStorage.setItem('hasVisitedWelcome', 'true');
 
                 // WELCOME text effect
