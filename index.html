@@ -520,15 +520,10 @@
             // ローディング画面を生成
             const loading = document.createElement('div');
             loading.id = 'loading';
-            loading.innerHTML = `
-                <div class="loading-content">
-                    <h1>Loading...</h1>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-            `;
             document.body.appendChild(loading);
+
+            // ローディング中にスクロールバーを表示する
+            document.body.style.overflow = 'auto';
 
             const container = document.querySelector('.container');
 
