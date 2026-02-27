@@ -48,6 +48,7 @@
             transform: scale(1.75);
             transform-origin: top center;
             transition: opacity 1s ease-in;
+            width: 600px;
         }
 
         #loading {
@@ -130,6 +131,24 @@
             padding: 30px;
             text-align: center;
             border-bottom: 1px solid #333;
+            position: relative;
+        }
+
+        #lang-toggle {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 90px;
+            text-align: center;
+        }
+
+        .left {
+            text-align: center;
         }
 
         .profile-img {
@@ -166,6 +185,8 @@
             margin: 15px;
             position: relative;
             box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #000000, 0 0 0 3px #ffffff, 0 8px 25px rgba(255, 255, 255, 0.15);
+            min-height: 120px;
+            min-width: 300px;
         }
 
         .profile-section::before {
@@ -209,6 +230,8 @@
             margin: 15px;
             position: relative;
             box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #000000, 0 0 0 3px #ffffff, 0 8px 25px rgba(255, 255, 255, 0.15);
+            min-height: 120px;
+            min-width: 300px;
         }
 
         .game-section::before {
@@ -377,13 +400,14 @@
             </div>
             <h1>musuke</h1>
             <p class="bio"></p>
+            <button id="lang-toggle">English</button>
         </div>
         
-        <div class="profile-section">
+        <div class="profile-section" data-lang="ja">
             <div class="game-title">MY PROFILE</div>
             <p class="profile-text">
                 NAME - musuke<br>
-                AGE - SECRET<br>
+                AGE - Secret<br>
                 GENDER - ♂ <br>
                 MBTI - INFP-T(仲介者)<br>
                 BIRTHDAY - 7/7
@@ -394,8 +418,38 @@
                 過激な下ネタ　暴言　<br>
             </p>
         </div>
+        <div class="profile-section" data-lang="en" style="display:none;">
+            <div class="game-title">MY PROFILE</div>
+            <p class="profile-text">
+                NAME - musuke<br>
+                AGE - Secret<br>
+                GENDER - Male<br>
+                MBTI - INFP-T (Mediator)<br>
+                BIRTHDAY - 7/7
+            </p>
+            <p class="profile-text">
+                <br>
+                Dislikes<br>
+                Extreme dirty jokes, violent language<br>
+            </p>
+        </div>
+        <div class="profile-section" data-lang="ko" style="display:none;">
+            <div class="game-title">MY PROFILE</div>
+            <p class="profile-text">
+                NAME - musuke<br>
+                AGE - Secret<br>
+                GENDER - 남성<br>
+                MBTI - INFP-T (중재자)<br>
+                BIRTHDAY - 7/7
+            </p>
+            <p class="profile-text">
+                <br>
+                싫어하는 것<br>
+                과도한 더러운 농담, 폭력적인 언어<br>
+            </p>
+        </div>
 
-        <div class="game-section">
+        <div class="game-section" data-lang="ja">
             <div class="game-title">PLAY GAME</div>
             <p class="game-text">
                 Minecraft Bedrock ＆ Java<br>
@@ -407,8 +461,32 @@
                 etc...
             </p>
         </div>
+        <div class="game-section" data-lang="en" style="display:none;">
+            <div class="game-title">PLAY GAME</div>
+            <p class="game-text">
+                Minecraft Bedrock & Java<br>
+                Overwatch<br>
+                Roblox<br>
+                Among Us<br>
+                APEX<br>
+                R.E.P.O.<br>
+                etc...
+            </p>
+        </div>
+        <div class="game-section" data-lang="ko" style="display:none;">
+            <div class="game-title">PLAY GAME</div>
+            <p class="game-text">
+                Minecraft Bedrock & Java<br>
+                Overwatch<br>
+                Roblox<br>
+                Among Us<br>
+                APEX<br>
+                R.E.P.O.<br>
+                etc...
+            </p>
+        </div>
 
-        <div class="profile-section">
+        <div class="profile-section" data-lang="ja">
             <p class="profile-text">
                 SNS<br><br>
                 <span class="sns-icon twitter" style="font-weight: bold; margin-right: 2px; display: inline-block; width: 18px; text-align: center;">𝕏</span>... <a href="https://x.com/7ir86w_">@7ir86w_</a><br>
@@ -416,9 +494,25 @@
                 <i class="fab fa-discord discord" style="margin-right: 2px; display: inline-block; width: 18px; text-align: center;"></i>... darker_days
             </p>
         </div>
+        <div class="profile-section" data-lang="en" style="display:none;">
+            <p class="profile-text">
+                SNS<br><br>
+                <span class="sns-icon twitter" style="font-weight: bold; margin-right: 2px; display: inline-block; width: 18px; text-align: center;">X</span>... <a href="https://x.com/7ir86w_">@7ir86w_</a><br>
+                <i class="fab fa-instagram instagram" style="margin-right: 2px; display: inline-block; width: 18px; text-align: center;"></i>... <a href="https://instagram.com/m.s.k_vii">@m.s.k_vii</a><br>
+                <i class="fab fa-discord discord" style="margin-right: 2px; display: inline-block; width: 18px; text-align: center;"></i>... darker_days
+            </p>
+        </div>
+        <div class="profile-section" data-lang="ko" style="display:none;">
+            <p class="profile-text">
+                SNS<br><br>
+                <span class="sns-icon twitter" style="font-weight: bold; margin-right: 2px; display: inline-block; width: 18px; text-align: center;">X</span>... <a href="https://x.com/7ir86w_">@7ir86w_</a><br>
+                <i class="fab fa-instagram instagram" style="margin-right: 2px; display: inline-block; width: 18px; text-align: center;"></i>... <a href="https://instagram.com/m.s.k_vii">@m.s.k_vii</a><br>
+                <i class="fab fa-discord discord" style="margin-right: 2px; display: inline-block; width: 18px; text-align: center;"></i>... darker_days
+            </p>
+        </div>
 
 
-        <div class="profile-section">
+        <div class="profile-section" data-lang="ja">
             <div class="game-title">FAVORITE MUSIC</div>
             <p class="profile-text">
                 <a href="https://www.youtube.com/watch?v=FtutLA63Cp8">Bad Apple!!</a><br>
@@ -427,8 +521,26 @@
                 <a href="https://youtu.be/edLUwSDHZ2M?si=cHTP8dbFJ4qfj-ch">审判时刻</a>
             </p>
         </div>
+        <div class="profile-section" data-lang="en" style="display:none;">
+            <div class="game-title">FAVORITE MUSIC</div>
+            <p class="profile-text">
+                <a href="https://www.youtube.com/watch?v=FtutLA63Cp8">Bad Apple!!</a><br>
+                <a href="https://youtu.be/Dp5xM_rM1yU?si=IfpliLc6-aTDoPgT">Por Una Cabeza</a><br>
+                <a href="https://youtu.be/xZKGTU_c-5w?si=9N751kiBuyAqz0eh">Villain</a><br>
+                <a href="https://youtu.be/edLUwSDHZ2M?si=cHTP8dbFJ4qfj-ch">Judgment Time</a>
+            </p>
+        </div>
+        <div class="profile-section" data-lang="ko" style="display:none;">
+            <div class="game-title">FAVORITE MUSIC</div>
+            <p class="profile-text">
+                <a href="https://www.youtube.com/watch?v=FtutLA63Cp8">Bad Apple!!</a><br>
+                <a href="https://youtu.be/Dp5xM_rM1yU?si=IfpliLc6-aTDoPgT">Por Una Cabeza</a><br>
+                <a href="https://youtu.be/xZKGTU_c-5w?si=9N751kiBuyAqz0eh">Villain</a><br>
+                <a href="https://youtu.be/edLUwSDHZ2M?si=cHTP8dbFJ4qfj-ch">판결 시간</a>
+            </p>
+        </div>
 
-        <div class="profile-section">
+        <div class="profile-section" data-lang="ja">
             <p class="profile-text cinecaption">
                 自分は何事もない面白い楽しい会話を拘りますので、<br>
                 関わって良かったと思える人だけ<a href="https://discord.gg/KZ64fSRFZh">仲良くします。</a><br>
@@ -442,10 +554,67 @@
                 何も言わずに消えるつもりなので、ご了承を。<br>
             </p>
         </div>
+        <div class="profile-section" data-lang="en" style="display:none;">
+            <p class="profile-text cinecaption">
+                I value fun, easygoing conversations<br>
+                and choose to <a href="https://discord.gg/KZ64fSRFZh">surround</a> myself only with those I truly connect with.<br>
+                Please understand that I can be quite blunt<br>
+                and may take things very seriously at times.<br>
+                <br>
+                I can’t stand excessive teasing, dishonesty,<br>
+                or anything disrespectful.<br>
+                What I truly appreciate is kindness—people who show genuine care and affection.<br>
+                <br>
+                If I feel we just don’t click or if I’m instinctively uncomfortable,<br>
+                I prefer to quietly distance myself without a word.<br>
+                I hope you can respect that.<br>
+            </p>
+        </div>
+        <div class="profile-section" data-lang="ko" style="display:none;">
+            <p class="profile-text cinecaption">
+                저는 아무 일 없는 즐겁고 유쾌한 대화를 중시하기 때문에,<br>
+                제가 함께해서 좋다고 느낀 분들과만 <a href="https://discord.gg/KZ64fSRFZh">지내고 싶습니다</a>.<br>
+                때로는 직설적인 발언이나 진지한 답변(진지충 같은 모습)이 있을 수 있지만,<br>
+                넓은 마음으로 이해해 주시기 바랍니다.<br>
+                <br>
+                한도를 넘는 놀림이나 거짓말,<br>
+                그리고 불쾌감을 주는 모든 것을 정말 싫어합니다.<br>
+                배려와 애정이 느껴지는 '다정한 사람'을 좋아합니다.<br>
+                <br>
+                말이 통하지 않거나 생리적으로 맞지 않는다고 판단되면,<br>
+                아무 말 없이 사라질 생각입니다.<br>
+                이 점 양해 부탁드립니다.<br>
+            </p>
+        </div>
 
         <ul class="sns-list">
         </ul>
     </div>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            const langToggle = document.getElementById('lang-toggle');
+            const languages = ['ja', 'en', 'ko'];
+            let currentLang = localStorage.getItem('lang') || 'ja';
+            let currentIndex = languages.indexOf(currentLang);
+            if (currentIndex === -1) currentIndex = 0;
+            setLanguage(languages[currentIndex]);
+
+            langToggle.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % languages.length;
+                const newLang = languages[currentIndex];
+                setLanguage(newLang);
+                localStorage.setItem('lang', newLang);
+            });
+
+            function setLanguage(lang) {
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+                });
+                const buttonTexts = { ja: 'English', en: '한국어', ko: '日本語' };
+                langToggle.textContent = buttonTexts[lang];
+            }
+        });
+    </script>
 </body>
 </html>
