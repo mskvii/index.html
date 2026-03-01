@@ -102,19 +102,7 @@
             font-weight: bold;
             transition: opacity 1s ease-out;
             overflow: auto;
-        }
-
-        #loading::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, #000000 25%, transparent 25%, transparent 50%, #000000 50%, #000000 75%, transparent 75%, transparent);
-            background-size: 20px 20px;
-            animation: move 1s linear infinite;
-            opacity: 0.1;
+            visibility: visible;
         }
 
         @keyframes move {
@@ -125,11 +113,10 @@
         .loading-text {
             font-size: 48px;
             color: #ffffff;
-            font-family: 'AbashiriMincho';
+            font-family: 'AbashiriMincho', 'MS Mincho', 'Hiragino Mincho Pro', 'Yu Mincho', serif;
             margin-bottom: 30px;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-            position: relative;
-            z-index: 10;
+            visibility: visible;
         }
 
         .progress-bar {
@@ -138,8 +125,6 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 2px;
             overflow: hidden;
-            position: relative;
-            z-index: 10;
         }
 
         .progress {
